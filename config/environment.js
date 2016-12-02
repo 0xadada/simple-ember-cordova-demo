@@ -5,7 +5,11 @@ module.exports = function(environment) {
     modulePrefix: 'hello-cordova',
     environment: environment,
     rootURL: '',
-    locationType: (this.hasOwnProperty('window') && this.cordova ? 'hash' : 'auto'),
+    locationType: (
+      this.hasOwnProperty('window') && this.cordova ?
+        'hash' :
+        'auto'
+    ),
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
