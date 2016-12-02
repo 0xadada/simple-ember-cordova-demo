@@ -73,6 +73,9 @@ ember cdv:platform add ios   # Adds iOS platform to Cordova
 # Generate icon and splashes from SVG base files
 ember cdv:make-icons && \
   ember cdv:make-splashes
+
+# Run a new build
+ember cdv:build
 ```
 
 ## Developers Joining
@@ -80,14 +83,30 @@ ember cdv:make-icons && \
 For developers joining the project:
 ```bash
 # clone susan repo
-# install deps
+git clone <blah>
+
+# install tools
+npm install -g cordova && \
+  npm install -g cordova ios-deploy
+
+# install project deps
+npm install && \
+  bower install
 
 # install Cordova platforms & plugins
 ember cdv:prepare  
 
-# one-off build and run app on emulator
+# build
+ember cdv:build
+
+# run app on emulator
 ember cdv run --platform=ios --emulator
+# run app on device
+ember cdv run --platform=ios --device
 
 # run LiveReload
 ember cdv:serve
+
+# open the XCode project
+ember cdv:open
 ```
