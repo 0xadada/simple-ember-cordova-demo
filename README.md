@@ -64,3 +64,30 @@ Specify what it takes to deploy your app.
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
+## Tasks
+
+```bash
+ember install ember-cordova  # Install cordova to ember project 
+ember cdv:platform add ios   # Adds iOS platform to Cordova
+
+# Generate icon and splashes from SVG base files
+ember cdv:make-icons && \
+  ember cdv:make-splashes
+```
+
+## Developers Joining
+
+For developers joining the project:
+```bash
+# clone susan repo
+# install deps
+
+# install Cordova platforms & plugins
+ember cdv:prepare  
+
+# one-off build and run app on emulator
+ember cdv run --platform=ios --emulator
+
+# run LiveReload
+ember cdv:serve
+```
